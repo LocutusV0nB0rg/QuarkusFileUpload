@@ -20,8 +20,7 @@ public class TagFilesControllerTest {
 
         //Action + Assert
         given().header(new Header("content-type", "multipart/form-data"))
-                .multiPart("file", file)
-                .multiPart("fileName", "unitdata.tag")
+                .multiPart("tagFile", file)
                 .contentType("multipart/form-data")
                 .when()
                 .put("/api/tag/upload")
